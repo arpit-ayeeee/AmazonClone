@@ -1,8 +1,12 @@
 import React from 'react';
 import CurrencyFormat from 'react-currency-format';
+import { useStateValue } from '../StateProvider';
+import {getBasketTotal} from '../Reducer';
 import './Subtotal.css';
 
 function Subtotal() {
+    const [{basket}, dispatch] = useStateValue();
+    
     return (
         <div className="subtotal">
             <CurrencyFormat 
@@ -10,7 +14,7 @@ function Subtotal() {
                     return(
                         <div>
                             <p>
-                                Subtotal (0 items): <strong>0</strong> 
+                                Subtotal ({basket.length} items): <strong>{value}</strong> 
                             </p>
                             <small className="subtotal_gift">
                                 <input type="checkbox"/>This order contains a gift
@@ -19,7 +23,7 @@ function Subtotal() {
                     )
                 }}
                 decimalScale={2} /**So that value will be till two decimal places */
-                value={0}          
+                value={getBasketTotal(basket)}          
                 displayType={"text"} /** This will be used as the thousand seperator, if values are in thousands */
                 thousandSeperator={true}  prefix={"$"}
             />
