@@ -17,7 +17,7 @@ function Home() {
                     <Product id="21461864" title="New Apple iPad Pro" price={599.99} image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg" rating={5}/>
                 </div>
                 <div className="home_row">
-                    <Product id="1247112" id="" title="Samsung LCDBCIW8GI8G 49' Curved LED Monitor" price={9.99} image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg" rating={3}/>
+                    <Product id="1247112"  title="Samsung LCDBCIW8GI8G 49' Curved LED Monitor" price={9.99} image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg" rating={3}/>
                 </div>
             </div>
         </div>
