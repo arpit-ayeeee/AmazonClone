@@ -39,7 +39,7 @@
     margin-top: 15px;
     font-size: 12px;
 }
-.login_button, .signup_button{
+.login_button{
     background-color: #f0c14b;
     border-radius: 2px;
     width: 100%;
@@ -49,6 +49,15 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
 }
-
+.signup_button{
+    background-color: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
 
 
