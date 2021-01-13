@@ -18,10 +18,11 @@ function Login() {
                     history.push("/");
                 }
             })
+            .catch(error => alert(error.message));
     }
     const signUp = e => {
         e.preventDefault();
-        //Firebase login part
+        //Firebase signUp/createUser part
         auth.createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 console.log(auth);

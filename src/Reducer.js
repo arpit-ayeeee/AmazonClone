@@ -1,5 +1,6 @@
 export const initialState = {
-    basket: []
+    basket: [],
+    user: null
 };
 //Selector, for calculating the total amount in the basket
 export const getBasketTotal = (basket) => basket.reduce((amount, item) => item.price + amount, 0); 
@@ -31,6 +32,11 @@ const reducer = (state, action) => {
             return{
                 ...state, 
                 basket: newBasket  //Then we'll update the state with the new basket
+            };
+        case "SET_USER":            //We'll update the datalayer, with the info of the current user, once the user logs in
+            return{
+                ...state,           //We'll update the user data with new input, for login it's new user's data, and for logout it'll be null
+                user: action.user
             };
         default: 
         return state;
