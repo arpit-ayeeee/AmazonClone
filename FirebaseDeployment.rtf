@@ -1,0 +1,225 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset77 ZapfDingbatsITC;\f2\fnil\fcharset134 PingFangSC-Regular;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 21cabbage@Arpits-MacBook-Air AmazonClone % sudo npm i -g firebase-tools\
+Password:\
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142\
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported\
+/usr/local/bin/firebase -> /usr/local/lib/node_modules/firebase-tools/lib/bin/firebase.js\
++ firebase-tools@9.2.0\
+updated 2 packages in 19.901s\
+21cabbage@Arpits-MacBook-Air AmazonClone % firebase login \
+i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.\
+\
+? Allow Firebase to collect CLI usage and error reporting information? Yes\
+i  To change your data collection preference at any time, run `firebase logout` and log in again.\
+\
+Visit this URL on this device to log in:\
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=437331995&redirect_uri=http%3A%2F%2Flocalhost%3A9005\
+\
+Waiting for authentication...\
+\
+
+\f1 \uc0\u10004 
+\f0   Success! Logged in as arpitjaiswal282000@gmail.com\
+21cabbage@Arpits-MacBook-Air AmazonClone % firebase init \
+\
+     ######## #### ########  ######## ########     ###     ######  ########\
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##\
+     ######    ##  ########  ######   ########  #########  ######  ######\
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##\
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########\
+\
+You're about to initialize a Firebase project in this directory:\
+\
+  /Users/21cabbage/My-work/AmazonClone\
+\
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selectio\
+n)\
+\
+Error: Must select at least one feature. Use SPACEBAR to select features, or provide a feature with firebase init [feature_name]\
+21cabbage@Arpits-MacBook-Air AmazonClone % firebase inint\
+Error: inint is not a Firebase command\
+\
+Did you mean init?\
+21cabbage@Arpits-MacBook-Air AmazonClone % firebase init\
+\
+     ######## #### ########  ######## ########     ###     ######  ########\
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##\
+     ######    ##  ########  ######   ########  #########  ######  ######\
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##\
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########\
+\
+You're about to initialize a Firebase project in this directory:\
+\
+  /Users/21cabbage/My-work/AmazonClone\
+\
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. Hosting: Configure and deploy Firebase Hosting sites\
+\
+=== Project Setup\
+\
+First, let's associate this project directory with a Firebase project.\
+You can create multiple project aliases by running firebase use --add, \
+but for now we'll just set up a default project.\
+\
+? Please select an option: Use an existing project\
+? Select a default Firebase project for this directory: clone-ed18e (AmazonClone)\
+i  Using project clone-ed18e (AmazonClone)\
+\
+=== Hosting Setup\
+\
+Your public directory is the folder (relative to your project directory) that\
+will contain Hosting assets to be uploaded with firebase deploy. If you\
+have a build process for your assets, use your build's output directory.\
+\
+? What do you want to use as your public directory? build\
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes\
+? Set up automatic builds and deploys with GitHub? Yes\
+
+\f1 \uc0\u10004 
+\f0   Wrote build/index.html\
+\
+i  Detected a .git folder at /Users/21cabbage/My-work/AmazonClone\
+i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store.\
+\
+Visit this URL on this device to log in:\
+https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=257989033&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo\
+\
+Waiting for authentication...\
+\
+
+\f1 \uc0\u10004 
+\f0   Success! Logged into GitHub as arpit-ayeeee\
+\
+? For which GitHub repository would you like to set up a GitHub workflow? (format: user/repository) arpit-ayeeee/AmazonClone\
+\
+
+\f1 \uc0\u10004 
+\f0   Created service account github-action-327386579 with Firebase Hosting admin permissions.\
+
+\f1 \uc0\u10004 
+\f0   Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_CLONE_ED18E.\
+i  You can manage your secrets at https://github.com/arpit-ayeeee/AmazonClone/settings/secrets.\
+\
+? Set up the workflow to run a build script before every deploy? Yes\
+? What script should be run before every deploy? npm run build\
+\
+
+\f1 \uc0\u10004 
+\f0   Created workflow file /Users/21cabbage/My-work/AmazonClone/.github/workflows/firebase-hosting-pull-request.yml\
+? Set up automatic deployment to your site's live channel when a PR is merged? Yes\
+? What is the name of the GitHub branch associated with your site's live channel? main\
+\
+
+\f1 \uc0\u10004 
+\f0   Created workflow file /Users/21cabbage/My-work/AmazonClone/.github/workflows/firebase-hosting-merge.yml\
+\
+i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App:\
+https://github.com/settings/connections/applications/89cf50f02ac6aaed3484\
+i  Action required: Push any new workflow file(s) to your repo\
+\
+i  Writing configuration info to firebase.json...\
+i  Writing project information to .firebaserc...\
+\
+
+\f1 \uc0\u10004 
+\f0   Firebase initialization complete!\
+21cabbage@Arpits-MacBook-Air AmazonClone % npm run build\
+\
+> amazonclone@0.1.0 build /Users/21cabbage/My-work/AmazonClone\
+> react-scripts build\
+\
+Creating an optimized production build...\
+Compiled with warnings.\
+\
+./src/Components/Header.js\
+  Line 11:  'dispatch' is assigned a value but never used  no-unused-vars\
+\
+./src/App.js\
+  Line 13:  Unexpected empty object pattern  no-empty-pattern\
+\
+./src/Components/CheckoutProduct.js\
+  Line 6:   'state' is assigned a value but never used                                                                                  no-unused-vars\
+  Line 27:  Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji\
+\
+./src/Components/Product.js\
+  Line 6:   'state' is assigned a value but never used                                                                                  no-unused-vars\
+  Line 32:  Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji\
+\
+./src/Components/Checkout.js\
+  Line 8:  'dispatch' is assigned a value but never used  no-unused-vars\
+\
+Search for the keywords to learn more about each warning.\
+To ignore, add // eslint-disable-next-line to the line before.\
+\
+File sizes after gzip:\
+\
+  308.07 KB  build/static/js/main.9e69d17f.js\
+  1.17 KB    build/static/css/main.2aad6f5c.css\
+\
+The project was built assuming it is hosted at the server root.\
+You can control this with the homepage field in your package.json.\
+For example, add this to build it for GitHub Pages:\
+\
+  "homepage" : "http://myname.github.io/myapp",\
+\
+The build folder is ready to be deployed.\
+You may serve it with a static server:\
+\
+  serve -s build\
+\
+Find out more about deployment here:\
+\
+  http://bit.ly/2vY88Kr\
+\
+\
+\
+   
+\f2 \'a8\'71
+\f0 \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 
+\f2 \'a8\'72
+\f0 \
+   \uc0\u9474                                                                  \u9474 \
+   \uc0\u9474       New patch version of npm available! 6.14.5 
+\f3 \uc0\u8594 
+\f0  6.14.11       \uc0\u9474 \
+   \uc0\u9474    Changelog: https://github.com/npm/cli/releases/tag/v6.14.11   \u9474 \
+   \uc0\u9474                 Run npm install -g npm to update!                \u9474 \
+   \uc0\u9474                                                                  \u9474 \
+   
+\f2 \'a8\'74
+\f0 \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 
+\f2 \'a8\'73
+\f0 \
+\
+21cabbage@Arpits-MacBook-Air AmazonClone % firebase deploy\
+\
+=== Deploying to 'clone-ed18e'...\
+\
+i  deploying hosting\
+i  hosting[clone-ed18e]: beginning deploy...\
+i  hosting[clone-ed18e]: found 9 files in build\
+
+\f1 \uc0\u10004 
+\f0   hosting[clone-ed18e]: file upload complete\
+i  hosting[clone-ed18e]: finalizing version...\
+
+\f1 \uc0\u10004 
+\f0   hosting[clone-ed18e]: version finalized\
+i  hosting[clone-ed18e]: releasing new version...\
+
+\f1 \uc0\u10004 
+\f0   hosting[clone-ed18e]: release complete\
+\
+
+\f1 \uc0\u10004 
+\f0   Deploy complete!\
+\
+Project Console: https://console.firebase.google.com/project/clone-ed18e/overview\
+Hosting URL: https://clone-ed18e.web.app\
+21cabbage@Arpits-MacBook-Air AmazonClone % }
