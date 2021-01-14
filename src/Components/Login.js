@@ -16,6 +16,7 @@ function Login() {
             .then((auth) => {
                 if(auth){
                     history.push("/");
+                    alert("Logged in successfully");
                 }
             })
             .catch(error => alert(error.message));
@@ -28,6 +29,7 @@ function Login() {
                 console.log(auth);
                 if(auth){
                     history.push('/');
+                    alert("Account created successfully")  //Once user creates an acc, it'll recieve a popup, and window wil reload
                 }
             })
             .catch(error => alert(error.message))
