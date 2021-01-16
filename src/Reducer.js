@@ -38,6 +38,11 @@ const reducer = (state, action) => {
                 ...state,           //We'll update the user data with new input, for login it's new user's data, and for logout it'll be null
                 user: action.user
             };
+        case "EMPTY_BASKET":
+            return{
+                ...state,
+                basket: []
+            };
         default: 
         return state;
     }

@@ -1,0 +1,26 @@
+.payments{
+    background-color: white;
+}
+.payments_container > h1{
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+}
+.payments_container > h1 > a{
+    text-decoration: none;
+    color: black;
+}
+.payments_section{              /* For each box*/
+    display: flex;
+    padding: 20px;
+    margin: 0px 20px;
+    border-bottom: 1px solid lightgray;
+}
+.payments_title{
+    flex: .2;              /*So that this particular element only takes 20% of the total length*/
+}
+.payments_address, .payments_items, .payments_details{
+    flex: .8;
+}
