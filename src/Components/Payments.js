@@ -3,20 +3,16 @@ import { useStateValue } from '../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 import {Link, useHistory} from 'react-router-dom';
 import './Payments.css';
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { CardElement } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../Reducer';
 import axios from 'axios';
-import {db} from '../firebase';
 
 
 function Payments() {
     const [{user, basket}, dispatch] = useStateValue();
     const history = useHistory();
 
-    //We'll use the two imp hooks for payment
-    const stripe = useStripe(); 
-    const elements = useElements();
 
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
@@ -24,51 +20,12 @@ function Payments() {
     const [processing, setProcessing] = useState("");
     const [clientSecret, setClientSecret] = useState("");
 
-    useEffect(() => {
-        //Means whenever the basket changes, we'll update the special stripe secret
-        //Generate the special stripe secret which allows us to charge a customer
-        const getClientSecret = async () => {
-            const response = await axios({
-                method: 'post',
-                //Stripe expects a total in a currencies in subunits, so we multiply
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-            });
-            setClientSecret(response.data.clientSecret);
-        }
-        getClientSecret();
-    },[basket])
-    console.log('The secret is ' + clientSecret);
 
     const handleSubmit = async(event) => {
         event.preventDefault(); //Prevent refreshing
-        setProcessing(true);
-
-        //COMMENTING THIS NOW DUE TO BUG IN NOT GETTING THE SECRETKEY
-        // const payload = await stripe.confirmCardPayment(clientSecret, {
-        //     payment_method: {
-        //         card: elements.getElement(CardElement)
-        //     }
+        // dispatch({
+        //     type: "EMPTY_BASKET"
         // })
-        // .then(({ paymentIntent }) => {
-        //     //paymentIntent = payment cofirmation
-        //     setSucceeded(true);
-        //     setError(null);
-        //     setProcessing(false);
-        //      dispatch({                      //We'll empty the basket
-        //         type: "EMPTY_BASKET"
-        //        })
-        //     
-        //     history.replace('/orders')  //We used replace cause we dont want them to come back to the payments page
-        // })
-
-
-        //SO DOIN THIS TO RUN, SHIFTING TO ORDERS BY FORCE FOR NOW, CAUSE OF NOT GETTING THE SECRET KEY FROM BACKEND DUE TO SOME BUG
-        setSucceeded(true);
-        setError(null);
-        setProcessing(false);
-        dispatch({
-            type: "EMPTY_BASKET"
-        })
         history.replace('/orders') 
 
     }

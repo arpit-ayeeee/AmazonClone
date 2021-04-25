@@ -6,11 +6,11 @@ import Home from './Components/Home';
 import Checkout from './Components/Checkout';
 import Login from './Components/Login';
 import Payments from './Components/Payments';
+import Orders from './Components/Orders';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements }  from '@stripe/react-stripe-js'; 
-import Orders from './Components/Orders';
 
 //Public to load stripe
 const promise = loadStripe('pk_test_51IAHl0IByyUUBEu05wNZ0wrHT5SdURtii4T7cw87TOuu3Y1QF0xTHAN32kWcRfAceLl79S43ukYtrNHrXrDjQoYn00kVou8oZ2');
