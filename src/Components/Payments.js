@@ -6,7 +6,6 @@ import './Payments.css';
 import { CardElement } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../Reducer';
-import axios from 'axios';
 
 
 function Payments() {
@@ -18,14 +17,14 @@ function Payments() {
     const [disabled, setDisabled] = useState(true);
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState("");
-    const [clientSecret, setClientSecret] = useState("");
 
 
     const handleSubmit = async(event) => {
         event.preventDefault(); //Prevent refreshing
-        // dispatch({
-        //     type: "EMPTY_BASKET"
-        // })
+
+        dispatch({              //Empting the basket
+            type: "EMPTY_BASKET"
+        })
         history.replace('/orders') 
 
     }

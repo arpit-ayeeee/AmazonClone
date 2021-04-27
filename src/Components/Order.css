@@ -1,0 +1,28 @@
+.orderContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orderTitle{
+    border-bottom: 1px solid lightgray;
+    margin-bottom:20px;
+}
+.checkoutProduct{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.checkoutProductImage{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;   /* This object fit tag, fits the image according to the resolutions we give*/
+}
+
+.checkoutProductInfo{
+    padding-left: 20px;
+}
+.checkoutProductTitle{
+    font-size: 17px;
+    font-weight: 800;
+}
